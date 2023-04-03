@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://bgpftcpaekqov"]
+
+[ext_resource type="Texture2D" uid="uid://bmknr6xu1io05" path="res://resources/Meow Knight/Meow-Knight_Idle.png" id="1_7g1x4"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ba3ym"]
+radius = 4.0
+height = 14.0
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, -3)
+shape = SubResource("CapsuleShape2D_ba3ym")
+
+[node name="Meow-knightIdle" type="Sprite2D" parent="."]
+position = Vector2(2, -9)
+rotation = -0.000651234
+texture = ExtResource("1_7g1x4")
+vframes = 6
+frame = 5

@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://ck7svn75y6bba"]
+
+[ext_resource type="Texture2D" uid="uid://bmknr6xu1io05" path="res://resources/Meow Knight/Meow-Knight_Idle.png" id="1_leu11"]
+
+[node name="Main" type="Node2D"]
+
+[node name="Meow-knightIdle" type="Sprite2D" parent="."]
+position = Vector2(123, 65)
+texture = ExtResource("1_leu11")
