@@ -1,10 +1,49 @@
-[gd_scene load_steps=6 format=3 uid="uid://bgpftcpaekqov"]
+[gd_scene load_steps=6 format=3 uid="uid://dj854holjp2fy"]
 
-[ext_resource type="Texture2D" uid="uid://bmknr6xu1io05" path="res://resources/Meow Knight/Meow-Knight_Idle.png" id="1_7g1x4"]
+[ext_resource type="Texture2D" uid="uid://bmknr6xu1io05" path="res://resources/Characters/Meow Knight/Meow-Knight_Idle.png" id="1_163vi"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ba3ym"]
 radius = 4.0
 height = 14.0
+
+[sub_resource type="Animation" id="Animation_300rx"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Meow-knightIdle:hframes")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Meow-knightIdle:vframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [6]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Meow-knightIdle:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
 
 [sub_resource type="Animation" id="Animation_52ck8"]
 resource_name = "idle"
@@ -48,45 +87,6 @@ tracks/2/keys = {
 "values": [0, 1, 2, 3, 4, 5]
 }
 
-[sub_resource type="Animation" id="Animation_300rx"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Meow-knightIdle:hframes")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [1]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Meow-knightIdle:vframes")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [6]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Meow-knightIdle:frame")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [0]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_amy6m"]
 _data = {
 "RESET": SubResource("Animation_300rx"),
@@ -98,13 +98,11 @@ _data = {
 [node name="Meow-knightIdle" type="Sprite2D" parent="."]
 position = Vector2(2, -9)
 rotation = -0.000651234
-scale = Vector2(1, 1)
-texture = ExtResource("1_7g1x4")
+texture = ExtResource("1_163vi")
 vframes = 6
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(1, -3)
-scale = Vector2(1, 1)
 shape = SubResource("CapsuleShape2D_ba3ym")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
