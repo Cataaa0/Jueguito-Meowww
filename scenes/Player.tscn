@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://dj854holjp2fy"]
+[gd_scene load_steps=7 format=3 uid="uid://dj854holjp2fy"]
 
 [ext_resource type="Texture2D" uid="uid://bmknr6xu1io05" path="res://resources/Characters/Meow Knight/Meow-Knight_Idle.png" id="1_163vi"]
+[ext_resource type="Script" path="res://scenes/Player.gd" id="1_jxlft"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ba3ym"]
 radius = 4.0
@@ -94,6 +95,7 @@ _data = {
 }
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
+script = ExtResource("1_jxlft")
 
 [node name="Meow-knightIdle" type="Sprite2D" parent="."]
 position = Vector2(2, -9)
