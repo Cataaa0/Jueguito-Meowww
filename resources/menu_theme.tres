@@ -5,6 +5,7 @@
 [resource]
 default_font = ExtResource("1_tnmed")
 BigLabel/base_type = &"Label"
+Label/colors/font_color = Color(1, 1, 1, 1)
 Label/fonts/font = ExtResource("1_tnmed")
 Label/styles/normal = null
 MarginContainer/constants/margin_bottom = 3
