@@ -1,0 +1,46 @@
+[gd_scene load_steps=3 format=3 uid="uid://ck2ql2sprtj70"]
+
+[ext_resource type="Theme" uid="uid://cfr2dm4btjn3u" path="res://resources/menu_theme.tres" id="1_tm8nn"]
+[ext_resource type="Script" path="res://ui/main_menu.gd" id="2_mh2xt"]
+
+[node name="MainMenu" type="MarginContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_tm8nn")
+script = ExtResource("2_mh2xt")
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Meoww Game"
+
+[node name="Start" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_type_variation = &"MediumButton"
+text = "Start"
+
+[node name="Exit" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_type_variation = &"MediumButton"
+text = "Exit"
+
+[node name="Credits" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_type_variation = &"MediumButton"
+text = "Credits"
