@@ -1,0 +1,83 @@
+[gd_scene load_steps=8 format=3 uid="uid://bdurqt7anl0dj"]
+
+[ext_resource type="Script" path="res://scenes/enemy_1.gd" id="1_b7jcy"]
+[ext_resource type="Texture2D" uid="uid://c3iic06boq8wa" path="res://resources/Characters/Enemy1/black_0.png" id="1_iks12"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_pljy0"]
+radius = 3.0
+height = 12.0
+
+[sub_resource type="Animation" id="Animation_x0wrl"]
+resource_name = "Idle"
+length = 2.1
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.6, 0.9, 1.2, 1.5, 1.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [4, 5, 6, 7, 28, 6, 5]
+}
+
+[sub_resource type="Animation" id="Animation_xulph"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [4]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_lq5b7"]
+_data = {
+"Idle": SubResource("Animation_x0wrl"),
+"RESET": SubResource("Animation_xulph")
+}
+
+[sub_resource type="GDScript" id="GDScript_mefqs"]
+script/source = "extends AnimationPlayer
+@onready var animation_player = $\".\"
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	pass
+
+"
+
+[node name="Enemy1" type="CharacterBody2D"]
+script = ExtResource("1_b7jcy")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-1.19209e-07, -3.57628e-07)
+scale = Vector2(0.78125, 0.851103)
+texture = ExtResource("1_iks12")
+hframes = 24
+vframes = 16
+frame = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, 1)
+shape = SubResource("CapsuleShape2D_pljy0")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_lq5b7")
+}
+script = SubResource("GDScript_mefqs")
