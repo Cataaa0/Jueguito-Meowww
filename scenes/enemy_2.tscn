@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://5o0a2q00jdtd"]
+
+[ext_resource type="Texture2D" uid="uid://ch8dckawcukbl" path="res://resources/Characters/Enemy2/game_boy_1.png" id="1_4kbce"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2xfbb"]
+radius = 4.0
+height = 12.0
+
+[node name="enemy_2" type="CharacterBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-2.5, -2.5)
+scale = Vector2(0.84375, 0.84375)
+texture = ExtResource("1_4kbce")
+hframes = 24
+vframes = 16
+frame = 55
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-5, -2)
+shape = SubResource("CapsuleShape2D_2xfbb")
