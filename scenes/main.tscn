@@ -526,7 +526,7 @@ format = 2
 layer_0/tile_data = PackedInt32Array(393219, 393216, 4, 393220, 393216, 4, 393218, 327680, 4, 393221, 458752, 4, 393222, 589824, 4, 262152, 458752, 4, 262153, 524288, 4, 262151, 327680, 4, 262154, 393216, 4, 262155, 393216, 4, 262156, 589824, 4)
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("6_3yxkx")]
-position = Vector2(66, 76)
+position = Vector2(114, 78)
 
 [node name="Enemy1" parent="." instance=ExtResource("6_fqn5n")]
 position = Vector2(180, 57)
