@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://c8l1nxgabktcx"]
+[gd_scene load_steps=12 format=3 uid="uid://c8l1nxgabktcx"]
 
 [ext_resource type="Texture2D" uid="uid://2jueqcud6juk" path="res://resources/stringstar fields/background_0.png" id="1_tqgrg"]
 [ext_resource type="Texture2D" uid="uid://mksvfqjildcw" path="res://resources/stringstar fields/background_1.png" id="2_5v46w"]
@@ -6,6 +6,9 @@
 [ext_resource type="Texture2D" uid="uid://bxb0vu5aio84g" path="res://resources/stringstar fields/background_2.png" id="5_fbevr"]
 [ext_resource type="PackedScene" uid="uid://dj854holjp2fy" path="res://scenes/Player.tscn" id="6_3yxkx"]
 [ext_resource type="PackedScene" uid="uid://bdurqt7anl0dj" path="res://scenes/enemy_1.tscn" id="6_fqn5n"]
+[ext_resource type="PackedScene" uid="uid://5o0a2q00jdtd" path="res://scenes/enemy_2.tscn" id="7_jusmy"]
+[ext_resource type="PackedScene" uid="uid://bnlfwmcdahebm" path="res://scenes/enemy_3.tscn" id="8_wlvdy"]
+[ext_resource type="PackedScene" uid="uid://dg64b5uci8big" path="res://scenes/enemy_4.tscn" id="9_ufgn7"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vxruc"]
 texture = ExtResource("3_vbt3n")
@@ -526,7 +529,16 @@ format = 2
 layer_0/tile_data = PackedInt32Array(393219, 393216, 4, 393220, 393216, 4, 393218, 327680, 4, 393221, 458752, 4, 393222, 589824, 4, 262152, 458752, 4, 262153, 524288, 4, 262151, 327680, 4, 262154, 393216, 4, 262155, 393216, 4, 262156, 589824, 4)
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("6_3yxkx")]
-position = Vector2(114, 78)
+position = Vector2(43, 92)
 
 [node name="Enemy1" parent="." instance=ExtResource("6_fqn5n")]
 position = Vector2(180, 57)
+
+[node name="Enemy2" parent="." instance=ExtResource("7_jusmy")]
+position = Vector2(98, 91)
+
+[node name="Enemy3" parent="." instance=ExtResource("8_wlvdy")]
+position = Vector2(157, 57)
+
+[node name="Enemy4" parent="." instance=ExtResource("9_ufgn7")]
+position = Vector2(72, 89)
