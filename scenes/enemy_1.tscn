@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://bdurqt7anl0dj"]
+[gd_scene load_steps=12 format=3 uid="uid://bdurqt7anl0dj"]
 
-[ext_resource type="Script" path="res://scenes/enemy_1.gd" id="1_b7jcy"]
 [ext_resource type="Texture2D" uid="uid://c3iic06boq8wa" path="res://resources/Characters/Enemy1/black_0.png" id="1_iks12"]
+
+[sub_resource type="GDScript" id="GDScript_ab7p6"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_pljy0"]
 radius = 3.0
@@ -10,7 +11,7 @@ height = 12.0
 [sub_resource type="Animation" id="Animation_x0wrl"]
 resource_name = "Idle"
 length = 2.1
-loop_mode = 1
+loop_mode = 2
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -18,10 +19,10 @@ tracks/0/path = NodePath("Sprite2D:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.3, 0.6, 0.9, 1.2, 1.5, 1.8),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.3, 0.6, 0.9, 1.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 1,
-"values": [4, 5, 6, 7, 28, 6, 5]
+"values": [4, 5, 6, 7, 28]
 }
 
 [sub_resource type="Animation" id="Animation_xulph"]
@@ -46,23 +47,22 @@ _data = {
 }
 
 [sub_resource type="GDScript" id="GDScript_mefqs"]
-script/source = "extends AnimationPlayer
-@onready var animation_player = $\".\"
 
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_uglu6"]
+animation = &"Idle"
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_gjpcf"]
+advance_mode = 2
 
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_jya8b"]
+states/Idle/node = SubResource("AnimationNodeAnimation_uglu6")
+states/Idle/position = Vector2(504, 100)
+transitions = ["Start", "Idle", SubResource("AnimationNodeStateMachineTransition_gjpcf")]
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
-
-"
+[sub_resource type="AnimationNodeStateMachinePlayback" id="AnimationNodeStateMachinePlayback_nfg2n"]
 
 [node name="Enemy1" type="CharacterBody2D"]
-script = ExtResource("1_b7jcy")
+script = SubResource("GDScript_ab7p6")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(-1.19209e-07, -3.57628e-07)
@@ -81,3 +81,9 @@ libraries = {
 "": SubResource("AnimationLibrary_lq5b7")
 }
 script = SubResource("GDScript_mefqs")
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
+tree_root = SubResource("AnimationNodeStateMachine_jya8b")
+anim_player = NodePath("../AnimationPlayer")
+active = true
+parameters/playback = SubResource("AnimationNodeStateMachinePlayback_nfg2n")

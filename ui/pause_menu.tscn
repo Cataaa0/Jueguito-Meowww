@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://bestd74natrpd"]
 
-[ext_resource type="Theme" uid="uid://cfr2dm4btjn3u" path="res://resources/menu_theme.tres" id="1_3gj8k"]
+[ext_resource type="Theme" uid="uid://b33o55cuc1nrp" path="res://resources/menu_theme.tres" id="1_3gj8k"]
 [ext_resource type="Script" path="res://ui/pause_menu.gd" id="1_3nfl1"]
 
 [node name="PauseMenu" type="MarginContainer"]
