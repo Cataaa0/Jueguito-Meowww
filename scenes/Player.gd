@@ -1,5 +1,5 @@
 extends CharacterBody2D
-
+class_name Player
 const SPEED = 140.0
 const JUMP_VELOCITY = -200.0
 const GRAVITY = 600
@@ -9,6 +9,7 @@ const ACCELERATION = 1000
 @onready var animatiojn_player = $AnimationPlayer
 @onready var animation_tree = $AnimationTree
 @onready var playback = animation_tree.get("parameters/playback")
+@onready var camera_2d = $Camera2D
 
 
 func _physics_process(delta):
@@ -45,3 +46,10 @@ func _physics_process(delta):
 		
 func jump():
 	velocity.y = JUMP_VELOCITY
+	
+func set_camera_limit(sup_izq: Vector2,inf_der: Vector2):
+	camera_2d.limit_bottom = inf_der.y
+	camera_2d.limit_left = sup_izq.x
+	camera_2d.limit_right = inf_der.x
+	camera_2d.limit_top = sup_izq.y
+	

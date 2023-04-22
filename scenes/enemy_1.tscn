@@ -1,12 +1,65 @@
-[gd_scene load_steps=12 format=3 uid="uid://bdurqt7anl0dj"]
+[gd_scene load_steps=20 format=3 uid="uid://bdurqt7anl0dj"]
 
+[ext_resource type="Script" path="res://script/enemy.gd" id="1_1ai4j"]
 [ext_resource type="Texture2D" uid="uid://c3iic06boq8wa" path="res://resources/Characters/Enemy1/black_0.png" id="1_iks12"]
-
-[sub_resource type="GDScript" id="GDScript_ab7p6"]
+[ext_resource type="Texture2D" uid="uid://ch8dckawcukbl" path="res://resources/Characters/Enemy2/game_boy_1.png" id="3_cvky5"]
+[ext_resource type="Texture2D" uid="uid://ctrh83cj8ltw2" path="res://resources/Characters/Enemy3/calico_0.png" id="4_rmtc3"]
+[ext_resource type="Texture2D" uid="uid://df6rtaqnatk74" path="res://resources/Characters/Enemy4/brown_7.png" id="5_8f0ur"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_pljy0"]
 radius = 3.0
 height = 12.0
+
+[sub_resource type="Animation" id="Animation_xulph"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [4]
+}
+
+[sub_resource type="Animation" id="Animation_q7beh"]
+resource_name = "idle"
+length = 1.3
+loop_mode = 2
+step = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [52, 53, 54, 55, 76]
+}
+
+[sub_resource type="Animation" id="Animation_bi2kq"]
+resource_name = "idle"
+length = 1.6
+loop_mode = 2
+step = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.2, 0.4, 0.6, 0.8, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [340, 341, 342, 343, 364]
+}
 
 [sub_resource type="Animation" id="Animation_x0wrl"]
 resource_name = "Idle"
@@ -25,44 +78,48 @@ tracks/0/keys = {
 "values": [4, 5, 6, 7, 28]
 }
 
-[sub_resource type="Animation" id="Animation_xulph"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [4]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_lq5b7"]
 _data = {
-"Idle": SubResource("Animation_x0wrl"),
-"RESET": SubResource("Animation_xulph")
+"RESET": SubResource("Animation_xulph"),
+"idle0": SubResource("Animation_bi2kq"),
+"idle1": SubResource("Animation_x0wrl"),
+"idle2": SubResource("Animation_q7beh")
 }
 
-[sub_resource type="GDScript" id="GDScript_mefqs"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_eg47u"]
+animation = &"Idle1"
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_uglu6"]
-animation = &"Idle"
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_wnmqa"]
+animation = &"idle0"
 
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_gjpcf"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_t2faq"]
+animation = &"idle2"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_85442"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_fk1i6"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_x668e"]
 advance_mode = 2
 
 [sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_jya8b"]
-states/Idle/node = SubResource("AnimationNodeAnimation_uglu6")
-states/Idle/position = Vector2(504, 100)
-transitions = ["Start", "Idle", SubResource("AnimationNodeStateMachineTransition_gjpcf")]
+states/Idle1/node = SubResource("AnimationNodeAnimation_eg47u")
+states/Idle1/position = Vector2(515, 100)
+states/idle0/node = SubResource("AnimationNodeAnimation_wnmqa")
+states/idle0/position = Vector2(515, 40)
+states/idle2/node = SubResource("AnimationNodeAnimation_t2faq")
+states/idle2/position = Vector2(515, 165)
+transitions = ["Start", "idle0", SubResource("AnimationNodeStateMachineTransition_85442"), "Start", "Idle1", SubResource("AnimationNodeStateMachineTransition_fk1i6"), "Start", "idle2", SubResource("AnimationNodeStateMachineTransition_x668e")]
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id="AnimationNodeStateMachinePlayback_nfg2n"]
 
 [node name="Enemy1" type="CharacterBody2D"]
-script = SubResource("GDScript_ab7p6")
+script = ExtResource("1_1ai4j")
+enemy_cats = Array[Texture]([ExtResource("1_iks12"), ExtResource("3_cvky5"), ExtResource("4_rmtc3"), ExtResource("5_8f0ur")])
+cat_names = Array[String](["Flo", "Oreo", "Hachi", "thainy", "jack"])
+cat_professions = Array[String](["Ingeniere", "Bombere", "Cantante", "Proplayer", "Abogade", "Profesore", "Chef", "Ladrone"])
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(-1.19209e-07, -3.57628e-07)
@@ -80,10 +137,8 @@ shape = SubResource("CapsuleShape2D_pljy0")
 libraries = {
 "": SubResource("AnimationLibrary_lq5b7")
 }
-script = SubResource("GDScript_mefqs")
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
 tree_root = SubResource("AnimationNodeStateMachine_jya8b")
 anim_player = NodePath("../AnimationPlayer")
-active = true
 parameters/playback = SubResource("AnimationNodeStateMachinePlayback_nfg2n")
