@@ -8,6 +8,8 @@ class_name Enemy
 @onready var animation_player = $AnimationPlayer
 @onready var sprite_2d = $Sprite2D
 
+const GRAVITY = 600
+
 enum enum_inconsistencias {COLOR, NAME, PROFESSION}
 
 var inconsistencia_cat := false
@@ -31,6 +33,11 @@ func _ready():
 	randomize_idle()
 	randomize_name()
 	randomize_profession()
+
+func _physics_process(delta):
+	if not is_on_floor():
+		velocity.y += GRAVITY * delta
+	move_and_slide()
 	
 func randomize_name():
 	cat_name =randi()%cat_names.size()
