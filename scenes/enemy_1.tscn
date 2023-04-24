@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://bdurqt7anl0dj"]
+[gd_scene load_steps=39 format=3 uid="uid://bdurqt7anl0dj"]
 
 [ext_resource type="Script" path="res://script/enemy.gd" id="1_1ai4j"]
 [ext_resource type="Texture2D" uid="uid://c3iic06boq8wa" path="res://resources/Characters/Enemy1/black_0.png" id="1_iks12"]
@@ -10,6 +10,20 @@
 [ext_resource type="Texture2D" uid="uid://dcns4145u561u" path="res://resources/Characters/Enemy1/orange_3.png" id="8_h5kfu"]
 [ext_resource type="Texture2D" uid="uid://blrqelit1o45g" path="res://resources/Characters/Enemy1/pink_0.png" id="9_5bc5d"]
 [ext_resource type="Texture2D" uid="uid://df4nimqhuwuko" path="res://resources/Characters/Enemy1/red_0.png" id="10_g4un7"]
+[ext_resource type="Texture2D" uid="uid://yy8lhinvok74" path="res://resources/Characters/Enemy1/blue_2.png" id="11_hng76"]
+[ext_resource type="Texture2D" uid="uid://0ft610m2fq7u" path="res://resources/Characters/Enemy1/brown_3.png" id="12_jdp7w"]
+[ext_resource type="Texture2D" uid="uid://p3ur4id67q00" path="res://resources/Characters/Enemy1/cotton_candy_blue_0.png" id="13_6lp1w"]
+[ext_resource type="Texture2D" uid="uid://d1h7qdkpqf7mu" path="res://resources/Characters/Enemy1/cotton_candy_pink_0.png" id="14_ea2e5"]
+[ext_resource type="Texture2D" uid="uid://deyiqprxmbj8g" path="res://resources/Characters/Enemy1/dark_0.png" id="15_o6voo"]
+[ext_resource type="Texture2D" uid="uid://ddbi3gg7iqqpk" path="res://resources/Characters/Enemy1/game_boy_0.png" id="16_aqbqg"]
+[ext_resource type="Texture2D" uid="uid://du17ogsj2wbub" path="res://resources/Characters/Enemy1/ghost_0.png" id="17_xco61"]
+[ext_resource type="Texture2D" uid="uid://ddmevynf3lbr4" path="res://resources/Characters/Enemy1/gold_0.png" id="18_48obv"]
+[ext_resource type="Texture2D" uid="uid://cggtnr8a3vslj" path="res://resources/Characters/Enemy1/hairless_1.png" id="19_setsw"]
+[ext_resource type="Texture2D" uid="uid://bbweulc2n6etp" path="res://resources/Characters/Enemy1/peach_0.png" id="20_0ljln"]
+[ext_resource type="Texture2D" uid="uid://6se1higv3y06" path="res://resources/Characters/Enemy1/radioactive_0.png" id="21_qmlyw"]
+[ext_resource type="Texture2D" uid="uid://ud4impjpugeg" path="res://resources/Characters/Enemy1/seal_point_0.png" id="22_vtoka"]
+[ext_resource type="Texture2D" uid="uid://btigjgbrn0eh1" path="res://resources/Characters/Enemy1/teal_0.png" id="23_wla3b"]
+[ext_resource type="Texture2D" uid="uid://byeyduvejfx8v" path="res://resources/Characters/Enemy1/white_grey_1.png" id="24_53akx"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_pljy0"]
 radius = 3.0
@@ -122,7 +136,7 @@ transitions = ["Start", "idle0", SubResource("AnimationNodeStateMachineTransitio
 
 [node name="Enemy1" type="CharacterBody2D"]
 script = ExtResource("1_1ai4j")
-enemy_cats = Array[Texture]([ExtResource("1_iks12"), ExtResource("3_cvky5"), ExtResource("4_rmtc3"), ExtResource("5_8f0ur"), ExtResource("6_e0wb7"), ExtResource("7_lijmr"), ExtResource("8_h5kfu"), ExtResource("9_5bc5d"), ExtResource("10_g4un7")])
+enemy_cats = Array[Texture]([ExtResource("1_iks12"), ExtResource("3_cvky5"), ExtResource("4_rmtc3"), ExtResource("5_8f0ur"), ExtResource("6_e0wb7"), ExtResource("7_lijmr"), ExtResource("8_h5kfu"), ExtResource("9_5bc5d"), ExtResource("10_g4un7"), ExtResource("11_hng76"), ExtResource("12_jdp7w"), ExtResource("13_6lp1w"), ExtResource("14_ea2e5"), ExtResource("15_o6voo"), ExtResource("16_aqbqg"), ExtResource("17_xco61"), ExtResource("18_48obv"), ExtResource("19_setsw"), ExtResource("20_0ljln"), ExtResource("21_qmlyw"), ExtResource("22_vtoka"), ExtResource("23_wla3b"), ExtResource("24_53akx")])
 cat_names = Array[String](["Flo", "Oreo", "Hachi", "thainy", "jack"])
 cat_professions = Array[String](["Ingeniere", "Bombere", "Cantante", "Proplayer", "Abogade", "Profesore", "Chef", "Ladrone"])
 
