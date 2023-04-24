@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ch8dckawcukbl"
-path="res://.godot/imported/game_boy_1.png-7d6ab7235814a73be4ea6937e91b0543.ctex"
+uid="uid://ctrh83cj8ltw2"
+path="res://.godot/imported/calico_0.png-69911d657ed4dd874c046c17a10fdf9a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://resources/Characters/Enemy2/game_boy_1.png"
-dest_files=["res://.godot/imported/game_boy_1.png-7d6ab7235814a73be4ea6937e91b0543.ctex"]
+source_file="res://resources/Characters/calico_0.png"
+dest_files=["res://.godot/imported/calico_0.png-69911d657ed4dd874c046c17a10fdf9a.ctex"]
 
 [params]
 
