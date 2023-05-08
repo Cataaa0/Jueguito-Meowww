@@ -578,32 +578,64 @@ sources/0 = SubResource("TileSetAtlasSource_vxruc")
 [node name="Main" type="Node2D"]
 script = ExtResource("1_226f6")
 
-[node name="Background1" type="Sprite2D" parent="."]
+[node name="Backgrounds" type="Node2D" parent="."]
+
+[node name="Background1" type="Sprite2D" parent="Backgrounds"]
 position = Vector2(128, 72)
 scale = Vector2(0.888889, 0.8)
 texture = ExtResource("1_tqgrg")
 
-[node name="Background1" type="Sprite2D" parent="Background1"]
+[node name="Background1" type="Sprite2D" parent="Backgrounds/Background1"]
 position = Vector2(1.52588e-05, 0.625)
 scale = Vector2(1, 0.993056)
 texture = ExtResource("2_5v46w")
 
-[node name="Background2" type="Sprite2D" parent="Background1"]
+[node name="Background2" type="Sprite2D" parent="Backgrounds/Background1"]
 position = Vector2(0, 0.625)
 scale = Vector2(1, 0.993056)
 texture = ExtResource("5_fbevr")
 
-[node name="Background2" type="Sprite2D" parent="."]
+[node name="Background2" type="Sprite2D" parent="Backgrounds"]
 position = Vector2(384, 72)
 scale = Vector2(0.888889, 0.8)
 texture = ExtResource("1_tqgrg")
 
-[node name="Background1" type="Sprite2D" parent="Background2"]
+[node name="Background1" type="Sprite2D" parent="Backgrounds/Background2"]
 position = Vector2(1.52588e-05, 0.625)
 scale = Vector2(1, 0.993056)
 texture = ExtResource("2_5v46w")
 
-[node name="Background2" type="Sprite2D" parent="Background2"]
+[node name="Background2" type="Sprite2D" parent="Backgrounds/Background2"]
+position = Vector2(0, 0.625)
+scale = Vector2(1, 0.993056)
+texture = ExtResource("5_fbevr")
+
+[node name="Background3" type="Sprite2D" parent="Backgrounds"]
+position = Vector2(640, 72)
+scale = Vector2(0.888889, 0.8)
+texture = ExtResource("1_tqgrg")
+
+[node name="Background1" type="Sprite2D" parent="Backgrounds/Background3"]
+position = Vector2(1.52588e-05, 0.625)
+scale = Vector2(1, 0.993056)
+texture = ExtResource("2_5v46w")
+
+[node name="Background2" type="Sprite2D" parent="Backgrounds/Background3"]
+position = Vector2(0, 0.625)
+scale = Vector2(1, 0.993056)
+texture = ExtResource("5_fbevr")
+
+[node name="Background4" type="Sprite2D" parent="Backgrounds"]
+position = Vector2(896, 72)
+scale = Vector2(0.888889, 0.8)
+texture = ExtResource("1_tqgrg")
+
+[node name="Background1" type="Sprite2D" parent="Backgrounds/Background4"]
+position = Vector2(1.52588e-05, 0.625)
+scale = Vector2(1, 0.993056)
+texture = ExtResource("2_5v46w")
+
+[node name="Background2" type="Sprite2D" parent="Backgrounds/Background4"]
 position = Vector2(0, 0.625)
 scale = Vector2(1, 0.993056)
 texture = ExtResource("5_fbevr")
@@ -611,7 +643,7 @@ texture = ExtResource("5_fbevr")
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_dok5q")
 format = 2
-layer_0/tile_data = PackedInt32Array(393218, 393216, 7, 327694, 393216, 4, 327695, 524288, 4, 327693, 458752, 4, 196628, 458752, 4, 196629, 524288, 4, 393238, 458752, 4, 393239, 393216, 4, 393237, 327680, 4, 393240, 458752, 4, 393241, 589824, 4, 524288, 983040, 9, 524289, 1114112, 9, 524290, 1114112, 9, 524291, 393216, 9, 524292, 262144, 9, 524294, 393216, 9, 524293, 393216, 9, 524295, 720896, 9, 524296, 393216, 9, 524297, 1114112, 9, 524298, 720896, 9, 524299, 393216, 9, 524300, 983040, 9, 524301, 720896, 9, 524302, 720896, 9, 524303, 327680, 9, 524304, 720896, 9, 524305, 720896, 9, 524306, 720896, 9, 524307, 786432, 9, 524308, 786432, 9, 524309, 983040, 9, 524310, 983040, 9, 524311, 327680, 9, 524312, 786432, 9, 524313, 262144, 9, 524314, 327680, 9, 524315, 983040, 9, 524316, 1114112, 9, 524317, 720896, 9, 524318, 262144, 9, 524319, 720896, 9, 458767, 262144, 8, 458768, 327680, 8, 458769, 393216, 8, 458770, 458752, 8, 458771, 524288, 8, 393233, 393216, 7, 458755, 458752, 8, 458753, 327680, 8, 458752, 262144, 8, 458754, 393216, 8, 458756, 524288, 8, 458779, 458752, 8, 458780, 327680, 8, 458781, 524288, 8, 458778, 327680, 8, 458777, 262144, 8, 458758, 0, 4, 458757, 65536, 4, 458762, 196608, 4, 393226, 196608, 3, 393227, 262144, 3, 458763, 262144, 4, 458761, 65536, 4, 458764, 589824, 7, 458773, 65536, 4, 458782, 262144, 5, 131084, 393216, 4, 131085, 524288, 4, 131083, 327680, 4, 131086, 458752, 4, 262152, 524288, 4, 262153, 393216, 4, 262151, 327680, 4, 262154, 589824, 4, 393221, 458752, 4, 393222, 589824, 4, 393220, 327680, 4, 327692, 458752, 4, 327691, 327680, 4, 327696, 458752, 4, 327697, 589824, 4, 131087, 524288, 4, 131088, 589824, 4, 196630, 589824, 4, 262172, 458752, 4, 262173, 524288, 4, 262171, 327680, 4, 262174, 524288, 4, 262175, 589824, 4, 196627, 327680, 4)
+layer_0/tile_data = PackedInt32Array(393218, 393216, 7, 196628, 458752, 4, 196629, 524288, 4, 524288, 983040, 9, 524289, 1114112, 9, 524290, 1114112, 9, 524291, 393216, 9, 524292, 262144, 9, 524294, 393216, 9, 524293, 393216, 9, 524295, 720896, 9, 524296, 393216, 9, 524297, 1114112, 9, 524298, 720896, 9, 524299, 393216, 9, 524300, 983040, 9, 524301, 720896, 9, 524302, 720896, 9, 524303, 327680, 9, 524304, 720896, 9, 524305, 720896, 9, 524306, 720896, 9, 524307, 786432, 9, 524308, 786432, 9, 524309, 983040, 9, 524310, 983040, 9, 524311, 327680, 9, 524312, 786432, 9, 524313, 262144, 9, 524314, 327680, 9, 524315, 983040, 9, 524316, 1114112, 9, 524317, 720896, 9, 524318, 262144, 9, 524319, 720896, 9, 458767, 262144, 8, 458768, 327680, 8, 458769, 393216, 8, 458770, 458752, 8, 458771, 524288, 8, 393233, 393216, 7, 458755, 458752, 8, 458753, 327680, 8, 458752, 262144, 8, 458754, 393216, 8, 458756, 524288, 8, 458779, 458752, 8, 458780, 327680, 8, 458781, 524288, 8, 458778, 327680, 8, 458777, 262144, 8, 458758, 0, 4, 458757, 65536, 4, 458762, 196608, 4, 393226, 196608, 3, 393227, 262144, 3, 458763, 262144, 4, 458761, 65536, 4, 458764, 589824, 7, 458773, 65536, 4, 458782, 262144, 5, 131084, 393216, 4, 131085, 524288, 4, 131083, 327680, 4, 131086, 458752, 4, 262152, 524288, 4, 262153, 393216, 4, 262151, 327680, 4, 262154, 589824, 4, 393221, 458752, 4, 393222, 589824, 4, 393220, 327680, 4, 131087, 524288, 4, 131088, 589824, 4, 196630, 589824, 4, 196627, 327680, 4, 393251, 458752, 4, 393252, 458752, 4, 393253, 524288, 4, 393254, 589824, 4, 262185, 524288, 4, 262186, 589824, 4, 262184, 327680, 4, 393261, 524288, 4, 393262, 589824, 4, 393260, 327680, 4, 131118, 393216, 4, 131119, 393216, 4, 131117, 327680, 4, 131120, 393216, 4, 131121, 589824, 4, 262170, 458752, 4, 262171, 589824, 4, 262169, 327680, 4)
 
 [node name="Player" parent="." instance=ExtResource("6_3yxkx")]
 position = Vector2(26, 103)
@@ -619,7 +651,7 @@ position = Vector2(26, 103)
 [node name="Spawn_enemy" type="Node" parent="."]
 
 [node name="Marker2D" type="Marker2D" parent="Spawn_enemy"]
-position = Vector2(128, 118)
+position = Vector2(231, 119)
 
 [node name="Marker2D2" type="Marker2D" parent="Spawn_enemy"]
 position = Vector2(359, 38)
@@ -631,19 +663,19 @@ position = Vector2(224, 21)
 position = Vector2(317, 118)
 
 [node name="Marker2D5" type="Marker2D" parent="Spawn_enemy"]
-position = Vector2(261, 70)
+position = Vector2(662, 53)
 
 [node name="Marker2D6" type="Marker2D" parent="Spawn_enemy"]
 position = Vector2(158, 54)
 
 [node name="Marker2D7" type="Marker2D" parent="Spawn_enemy"]
-position = Vector2(495, 55)
+position = Vector2(748, 22)
 
 [node name="Marker2D8" type="Marker2D" parent="Spawn_enemy"]
 position = Vector2(468, 116)
 
 [node name="Marker2D9" type="Marker2D" parent="Spawn_enemy"]
-position = Vector2(402, 86)
+position = Vector2(437, 54)
 
 [node name="Marker2D10" type="Marker2D" parent="Spawn_enemy"]
 position = Vector2(89, 85)
@@ -655,7 +687,7 @@ position = Vector2(89, 85)
 [node name="sup_izq" type="Marker2D" parent="Margen"]
 
 [node name="inf_der" type="Marker2D" parent="Margen"]
-position = Vector2(512, 144)
+position = Vector2(1024, 144)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("7_52dp5")
