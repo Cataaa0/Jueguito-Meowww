@@ -11,6 +11,7 @@ const ACCELERATION = 1000
 @onready var playback = animation_tree.get("parameters/playback")
 @onready var camera_2d = $Camera2D
 @onready var audio_stream_player = $AudioStreamPlayer
+@onready var talk_area = $TalkArea
 
 
 func _physics_process(delta):
