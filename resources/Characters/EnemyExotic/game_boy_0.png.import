@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://df6rtaqnatk74"
-path="res://.godot/imported/brown_7.png-fbd77c9765c24bd1f4060e7a6c7b109b.ctex"
+uid="uid://ddbi3gg7iqqpk"
+path="res://.godot/imported/game_boy_0.png-5607b2759c2f738ee8be5593c5f6b077.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://resources/Characters/brown_7.png"
-dest_files=["res://.godot/imported/brown_7.png-fbd77c9765c24bd1f4060e7a6c7b109b.ctex"]
+source_file="res://resources/Characters/EnemyExotic/game_boy_0.png"
+dest_files=["res://.godot/imported/game_boy_0.png-5607b2759c2f738ee8be5593c5f6b077.ctex"]
 
 [params]
 

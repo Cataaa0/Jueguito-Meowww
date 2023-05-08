@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://p3ur4id67q00"
-path="res://.godot/imported/cotton_candy_blue_0.png-304a72eeb40c80b7f7a887f62d87cdd3.ctex"
+uid="uid://du17ogsj2wbub"
+path="res://.godot/imported/ghost_0.png-eed9166a9fa0f601d4354cff4d58ece1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://resources/Characters/Enemy1/cotton_candy_blue_0.png"
-dest_files=["res://.godot/imported/cotton_candy_blue_0.png-304a72eeb40c80b7f7a887f62d87cdd3.ctex"]
+source_file="res://resources/Characters/EnemyExotic/ghost_0.png"
+dest_files=["res://.godot/imported/ghost_0.png-eed9166a9fa0f601d4354cff4d58ece1.ctex"]
 
 [params]
 
