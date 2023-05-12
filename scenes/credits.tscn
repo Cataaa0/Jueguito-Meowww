@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=3 uid="uid://g8xr25xwyucs"]
+
+[ext_resource type="Texture2D" uid="uid://2jueqcud6juk" path="res://resources/stringstar fields/background_0.png" id="1_niu1l"]
+[ext_resource type="Theme" uid="uid://b33o55cuc1nrp" path="res://resources/menu_theme.tres" id="2_nvp6q"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(129, 82)
+texture = ExtResource("1_niu1l")
+
+[node name="Label" type="Label" parent="Sprite2D"]
+offset_left = -124.0
+offset_top = -75.0
+offset_right = 286.0
+offset_bottom = 23.0
+theme = ExtResource("2_nvp6q")
+theme_override_font_sizes/font_size = 8
+text = "Creators: Catalina Gajardo, Romina Hernandez, Darlene Sobarzo
+Visuals:
+Background: Trixie
+main character: 9E0
+npcs: Pop Shop Packs
+Music:
+Cat Orchestra - migfus20
+Meow - IgnasD"

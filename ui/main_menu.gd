@@ -17,5 +17,5 @@ func _on_exit_pressed():
 	get_tree().quit()
 	
 func _on_credits_pressed():
-	get_tree().quit()
+	get_tree().change_scene_to_file("res://scenes/credits.tscn")
 # Called every frame. 'delta' is the elapsed time since the previous frame.
