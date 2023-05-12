@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://df6rtaqnatk74"
-path="res://.godot/imported/brown_7.png-fbd77c9765c24bd1f4060e7a6c7b109b.ctex"
+uid="uid://d1h7qdkpqf7mu"
+path="res://.godot/imported/cotton_candy_pink_0.png-4843518c8b1ba54a27b0ab4454d6a682.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://resources/Characters/brown_7.png"
-dest_files=["res://.godot/imported/brown_7.png-fbd77c9765c24bd1f4060e7a6c7b109b.ctex"]
+source_file="res://resources/Characters/EnemyExotic/cotton_candy_pink_0.png"
+dest_files=["res://.godot/imported/cotton_candy_pink_0.png-4843518c8b1ba54a27b0ab4454d6a682.ctex"]
 
 [params]
 

@@ -1,21 +1,16 @@
-[gd_scene load_steps=31 format=3 uid="uid://bibi4xaphyeby"]
+[gd_scene load_steps=26 format=3 uid="uid://mcu54c2kkqkk"]
 
-[ext_resource type="Texture2D" uid="uid://c3iic06boq8wa" path="res://resources/Characters/Enemy1/black_0.png" id="1_iks12"]
-[ext_resource type="Script" path="res://script/enemy_1.gd" id="1_khefn"]
-[ext_resource type="Texture2D" uid="uid://5e6lbw7og343" path="res://resources/Characters/Enemy1/black_4.png" id="3_tjl8u"]
-[ext_resource type="Texture2D" uid="uid://ctrh83cj8ltw2" path="res://resources/Characters/Enemy1/calico_0.png" id="4_80kid"]
-[ext_resource type="Texture2D" uid="uid://df6rtaqnatk74" path="res://resources/Characters/Enemy1/brown_7.png" id="5_63sae"]
-[ext_resource type="Texture2D" uid="uid://chmdl7qjv58bl" path="res://resources/Characters/Enemy1/creme_1.png" id="6_e0wb7"]
-[ext_resource type="Texture2D" uid="uid://bi1uyikglwr2i" path="res://resources/Characters/Enemy1/grey_1.png" id="7_lijmr"]
-[ext_resource type="Texture2D" uid="uid://dcns4145u561u" path="res://resources/Characters/Enemy1/orange_3.png" id="8_h5kfu"]
-[ext_resource type="Texture2D" uid="uid://blrqelit1o45g" path="res://resources/Characters/Enemy1/pink_0.png" id="9_5bc5d"]
-[ext_resource type="Texture2D" uid="uid://yy8lhinvok74" path="res://resources/Characters/Enemy1/blue_2.png" id="11_hng76"]
-[ext_resource type="Texture2D" uid="uid://0ft610m2fq7u" path="res://resources/Characters/Enemy1/brown_3.png" id="12_jdp7w"]
-[ext_resource type="Texture2D" uid="uid://ddmevynf3lbr4" path="res://resources/Characters/Enemy1/gold_0.png" id="18_48obv"]
-[ext_resource type="Texture2D" uid="uid://cggtnr8a3vslj" path="res://resources/Characters/Enemy1/hairless_1.png" id="19_setsw"]
-[ext_resource type="Texture2D" uid="uid://bbweulc2n6etp" path="res://resources/Characters/Enemy1/peach_0.png" id="20_0ljln"]
-[ext_resource type="Texture2D" uid="uid://ud4impjpugeg" path="res://resources/Characters/Enemy1/seal_point_0.png" id="22_vtoka"]
-[ext_resource type="Texture2D" uid="uid://btigjgbrn0eh1" path="res://resources/Characters/Enemy1/teal_0.png" id="23_wla3b"]
+[ext_resource type="Script" path="res://script/enemy_1.gd" id="1_meoxt"]
+[ext_resource type="Texture2D" uid="uid://c3iic06boq8wa" path="res://resources/Characters/Enemy1/black_0.png" id="2_ar5tl"]
+[ext_resource type="Texture2D" uid="uid://p3ur4id67q00" path="res://resources/Characters/EnemyExotic/cotton_candy_blue_0.png" id="2_qalvc"]
+[ext_resource type="Texture2D" uid="uid://d1h7qdkpqf7mu" path="res://resources/Characters/EnemyExotic/cotton_candy_pink_0.png" id="3_4h5mw"]
+[ext_resource type="Texture2D" uid="uid://deyiqprxmbj8g" path="res://resources/Characters/EnemyExotic/dark_0.png" id="4_fgfpo"]
+[ext_resource type="Texture2D" uid="uid://ddbi3gg7iqqpk" path="res://resources/Characters/EnemyExotic/game_boy_0.png" id="5_23t5y"]
+[ext_resource type="Texture2D" uid="uid://ch8dckawcukbl" path="res://resources/Characters/EnemyExotic/game_boy_1.png" id="6_fwnp7"]
+[ext_resource type="Texture2D" uid="uid://du17ogsj2wbub" path="res://resources/Characters/EnemyExotic/ghost_0.png" id="7_wt7te"]
+[ext_resource type="Texture2D" uid="uid://6se1higv3y06" path="res://resources/Characters/EnemyExotic/radioactive_0.png" id="8_odes3"]
+[ext_resource type="Texture2D" uid="uid://df4nimqhuwuko" path="res://resources/Characters/EnemyExotic/red_0.png" id="9_tk5rg"]
+[ext_resource type="Texture2D" uid="uid://byeyduvejfx8v" path="res://resources/Characters/EnemyExotic/white_grey_1.png" id="10_ay2e5"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_pljy0"]
 radius = 4.0
@@ -127,15 +122,15 @@ transitions = ["Start", "idle0", SubResource("AnimationNodeStateMachineTransitio
 [sub_resource type="AnimationNodeStateMachinePlayback" id="AnimationNodeStateMachinePlayback_nfg2n"]
 
 [node name="Enemy1" type="CharacterBody2D"]
-script = ExtResource("1_khefn")
-enemy_cats = Array[Texture]([ExtResource("1_iks12"), ExtResource("3_tjl8u"), ExtResource("11_hng76"), ExtResource("12_jdp7w"), ExtResource("5_63sae"), ExtResource("4_80kid"), ExtResource("6_e0wb7"), ExtResource("18_48obv"), ExtResource("7_lijmr"), ExtResource("19_setsw"), ExtResource("8_h5kfu"), ExtResource("20_0ljln"), ExtResource("9_5bc5d"), ExtResource("22_vtoka"), ExtResource("23_wla3b")])
+script = ExtResource("1_meoxt")
+enemy_cats = Array[Texture]([ExtResource("2_qalvc"), ExtResource("3_4h5mw"), ExtResource("4_fgfpo"), ExtResource("5_23t5y"), ExtResource("6_fwnp7"), ExtResource("7_wt7te"), ExtResource("8_odes3"), ExtResource("9_tk5rg"), ExtResource("10_ay2e5")])
 cat_names = Array[String](["Flo", "Oreo", "Hachi", "thainy", "jack"])
 cat_professions = Array[String](["Ingeniere", "Bombere", "Cantante", "Proplayer", "Abogade", "Profesore", "Chef", "Ladrone"])
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(-1.19209e-07, -3.57628e-07)
 scale = Vector2(0.681, 0.742)
-texture = ExtResource("1_iks12")
+texture = ExtResource("2_ar5tl")
 hframes = 24
 vframes = 16
 frame = 4

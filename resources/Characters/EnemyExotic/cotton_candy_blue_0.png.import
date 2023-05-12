@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ch8dckawcukbl"
-path="res://.godot/imported/game_boy_1.png-a9ebab7f54389b3e2969038ac53b44b2.ctex"
+uid="uid://p3ur4id67q00"
+path="res://.godot/imported/cotton_candy_blue_0.png-97cdd9c923185417f656f4c2ae1918fa.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://resources/Characters/Enemy1/game_boy_1.png"
-dest_files=["res://.godot/imported/game_boy_1.png-a9ebab7f54389b3e2969038ac53b44b2.ctex"]
+source_file="res://resources/Characters/EnemyExotic/cotton_candy_blue_0.png"
+dest_files=["res://.godot/imported/cotton_candy_blue_0.png-97cdd9c923185417f656f4c2ae1918fa.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://6se1higv3y06"
-path="res://.godot/imported/radioactive_0.png-d9e8bc80ad2a8ba19444d8447fff97b8.ctex"
+uid="uid://df4nimqhuwuko"
+path="res://.godot/imported/red_0.png-3fa491b98c455bc0f0cf7e6d3139f68a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://resources/Characters/Enemy1/radioactive_0.png"
-dest_files=["res://.godot/imported/radioactive_0.png-d9e8bc80ad2a8ba19444d8447fff97b8.ctex"]
+source_file="res://resources/Characters/EnemyExotic/red_0.png"
+dest_files=["res://.godot/imported/red_0.png-3fa491b98c455bc0f0cf7e6d3139f68a.ctex"]
 
 [params]
 

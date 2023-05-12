@@ -10,6 +10,8 @@ const ACCELERATION = 1000
 @onready var animation_tree = $AnimationTree
 @onready var playback = animation_tree.get("parameters/playback")
 @onready var camera_2d = $Camera2D
+@onready var audio_stream_player = $AudioStreamPlayer
+@onready var talk_area = $TalkArea
 
 
 func _physics_process(delta):
@@ -46,6 +48,7 @@ func _physics_process(delta):
 		
 func jump():
 	velocity.y = JUMP_VELOCITY
+	audio_stream_player.play()
 	
 func set_camera_limit(sup_izq: Vector2,inf_der: Vector2):
 	camera_2d.limit_bottom = inf_der.y
