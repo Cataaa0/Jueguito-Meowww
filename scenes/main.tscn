@@ -684,7 +684,7 @@ position = Vector2(89, 85)
 
 [node name="Margen" type="Node" parent="."]
 
-[node name="sup_izq" type="Marker2D" parent="Margen"]
+[node name="sup_izq" type="Marker2D" parent="Margen" groups=["min"]]
 
 [node name="inf_der" type="Marker2D" parent="Margen"]
 position = Vector2(1024, 144)
