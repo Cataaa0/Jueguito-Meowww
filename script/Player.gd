@@ -29,6 +29,11 @@ func _physics_process(delta):
 	velocity.x = move_toward(velocity.x, move_input * SPEED, ACCELERATION * delta)
 
 	move_and_slide()
+	var dead_limit = get_tree().get_nodes_in_group("dead_limit")[0].global_position
+	var spawn_init = get_tree().get_nodes_in_group("spawn_init")[0].global_position
+	if global_position.y > dead_limit.y + 10:
+		global_position.y = spawn_init.y
+		global_position.x = spawn_init.x
 	
 	#Animation
 	if move_input:

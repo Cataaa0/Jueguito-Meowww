@@ -687,7 +687,7 @@ position = Vector2(89, 85)
 
 [node name="sup_izq" type="Marker2D" parent="Margen"]
 
-[node name="inf_der" type="Marker2D" parent="Margen"]
+[node name="inf_der" type="Marker2D" parent="Margen" groups=["dead_limit"]]
 position = Vector2(1024, 144)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
@@ -697,3 +697,8 @@ autoplay = true
 bus = &"Music"
 
 [node name="init_wall" parent="." instance=ExtResource("8_hs7u6")]
+
+[node name="Spawn_init" type="Node2D" parent="."]
+
+[node name="Marker_player" type="Marker2D" parent="Spawn_init" groups=["spawn_init"]]
+position = Vector2(18, 102)
