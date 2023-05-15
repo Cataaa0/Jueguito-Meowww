@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://c8l1nxgabktcx"]
+[gd_scene load_steps=11 format=3 uid="uid://c8l1nxgabktcx"]
 
 [ext_resource type="Script" path="res://script/main.gd" id="1_226f6"]
 [ext_resource type="Texture2D" uid="uid://2jueqcud6juk" path="res://resources/stringstar fields/background_0.png" id="1_tqgrg"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://bxb0vu5aio84g" path="res://resources/stringstar fields/background_2.png" id="5_fbevr"]
 [ext_resource type="PackedScene" uid="uid://bgogccwf21d54" path="res://scenes/Player.tscn" id="6_3yxkx"]
 [ext_resource type="AudioStream" uid="uid://gmno6j3ytap2" path="res://resources/Sounds/cat.mp3" id="7_52dp5"]
+[ext_resource type="PackedScene" uid="uid://qgks0exlu435" path="res://resources/init_wall.tscn" id="8_hs7u6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vxruc"]
 texture = ExtResource("3_vbt3n")
@@ -684,7 +685,7 @@ position = Vector2(89, 85)
 
 [node name="Margen" type="Node" parent="."]
 
-[node name="sup_izq" type="Marker2D" parent="Margen" groups=["min"]]
+[node name="sup_izq" type="Marker2D" parent="Margen"]
 
 [node name="inf_der" type="Marker2D" parent="Margen"]
 position = Vector2(1024, 144)
@@ -694,3 +695,5 @@ stream = ExtResource("7_52dp5")
 volume_db = -9.369
 autoplay = true
 bus = &"Music"
+
+[node name="init_wall" parent="." instance=ExtResource("8_hs7u6")]

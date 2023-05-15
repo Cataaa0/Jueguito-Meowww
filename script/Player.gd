@@ -29,10 +29,6 @@ func _physics_process(delta):
 	velocity.x = move_toward(velocity.x, move_input * SPEED, ACCELERATION * delta)
 
 	move_and_slide()
-	var min = get_tree().get_nodes_in_group("min")[0].global_position
-	if global_position.x < min.x:
-		global_position.x = min.x + 10
-	
 	
 	#Animation
 	if move_input:
