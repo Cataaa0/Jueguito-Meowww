@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://7b7gjygkd8cm"]
+
+[ext_resource type="Theme" uid="uid://b33o55cuc1nrp" path="res://resources/menu_theme.tres" id="1_3nwgb"]
+[ext_resource type="Script" path="res://scenes/Go_to_memories.gd" id="2_81tqv"]
+
+[node name="MarginContainer" type="MarginContainer"]
+offset_left = 171.0
+offset_top = 112.0
+offset_right = 249.0
+offset_bottom = 136.0
+size_flags_stretch_ratio = 1.22
+theme = ExtResource("1_3nwgb")
+theme_override_constants/margin_left = 0
+theme_override_constants/margin_right = 0
+script = ExtResource("2_81tqv")
+
+[node name="Memories" type="Button" parent="."]
+layout_mode = 2
+size_flags_horizontal = 0
+theme = ExtResource("1_3nwgb")
+theme_override_colors/font_color = Color(0.913725, 0.568627, 1, 1)
+theme_override_font_sizes/font_size = 10
+text = "Go to memories"

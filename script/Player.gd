@@ -61,3 +61,4 @@ func set_camera_limit(sup_izq: Vector2,inf_der: Vector2):
 	camera_2d.limit_right = inf_der.x
 	camera_2d.limit_top = sup_izq.y
 	
+

@@ -123,6 +123,7 @@ states/idle0/position = Vector2(515, 40)
 states/idle2/node = SubResource("AnimationNodeAnimation_t2faq")
 states/idle2/position = Vector2(515, 165)
 transitions = ["Start", "idle0", SubResource("AnimationNodeStateMachineTransition_85442"), "Start", "Idle1", SubResource("AnimationNodeStateMachineTransition_fk1i6"), "Start", "idle2", SubResource("AnimationNodeStateMachineTransition_x668e")]
+graph_offset = Vector2(0, -5.48363e-06)
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id="AnimationNodeStateMachinePlayback_nfg2n"]
 
