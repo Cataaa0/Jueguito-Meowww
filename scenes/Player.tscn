@@ -469,15 +469,13 @@ script = ExtResource("1_bpuqm")
 position = Vector2(1, -6)
 sprite_frames = SubResource("SpriteFrames_ojgnc")
 animation = &"idle"
-
-frame = 1
+frame = 2
 
 [node name="TalkArea" type="Area2D" parent="Pivot"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Pivot/TalkArea"]
 position = Vector2(9.25, -6)
 shape = SubResource("RectangleShape2D_op0ak")
-
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(1, -3)

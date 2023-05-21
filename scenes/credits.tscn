@@ -1,19 +1,21 @@
-[gd_scene load_steps=3 format=3 uid="uid://g8xr25xwyucs"]
+[gd_scene load_steps=4 format=3 uid="uid://g8xr25xwyucs"]
 
+[ext_resource type="Script" path="res://scenes/credits.gd" id="1_4ne3u"]
 [ext_resource type="Texture2D" uid="uid://2jueqcud6juk" path="res://resources/stringstar fields/background_0.png" id="1_niu1l"]
 [ext_resource type="Theme" uid="uid://b33o55cuc1nrp" path="res://resources/menu_theme.tres" id="2_nvp6q"]
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource("1_4ne3u")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(129, 82)
+position = Vector2(146, 78)
 texture = ExtResource("1_niu1l")
 
 [node name="Label" type="Label" parent="Sprite2D"]
-offset_left = -124.0
-offset_top = -75.0
-offset_right = 286.0
-offset_bottom = 23.0
+offset_left = -130.0
+offset_top = -74.0
+offset_right = 132.0
+offset_bottom = 29.0
 theme = ExtResource("2_nvp6q")
 theme_override_font_sizes/font_size = 8
 text = "Creators: Catalina Gajardo, Romina Hernandez, Darlene Sobarzo
@@ -24,3 +26,18 @@ npcs: Pop Shop Packs
 Music:
 Cat Orchestra - migfus20
 Meow - IgnasD"
+
+[node name="MenuContainer" type="MarginContainer" parent="."]
+offset_left = 217.0
+offset_top = 126.0
+offset_right = 254.0
+offset_bottom = 140.0
+
+[node name="MainMenu" type="Button" parent="MenuContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+size_flags_stretch_ratio = 0.0
+theme = ExtResource("2_nvp6q")
+theme_override_font_sizes/font_size = 5
+text = "Main Menu"
