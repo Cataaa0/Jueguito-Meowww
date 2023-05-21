@@ -7,6 +7,7 @@ class_name Enemy
 
 @onready var animation_player = $AnimationPlayer
 @onready var sprite_2d = $Sprite2D
+@onready var label = $Label
 
 const GRAVITY = 600
 
@@ -33,6 +34,7 @@ func _ready():
 	randomize_idle()
 	randomize_name()
 	randomize_profession()
+	label.visible = false
 
 func _physics_process(delta):
 	if not is_on_floor():
@@ -61,3 +63,13 @@ func init_inconsistencias():
 	for i in enum_inconsistencias.size()-n_inconsistencias:
 		inconsistencias.append(false)
 	inconsistencias.shuffle()
+
+func talk():
+	if label.visible:
+		return
+	label.visible = true
+	#await get_tree().create_timer(1).timeout
+	#label.visible = false
+
+func stop_talk():
+	label.visible = false

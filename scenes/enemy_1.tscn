@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://bibi4xaphyeby"]
+[gd_scene load_steps=33 format=3 uid="uid://bibi4xaphyeby"]
 
 [ext_resource type="Texture2D" uid="uid://c3iic06boq8wa" path="res://resources/Characters/Enemy1/black_0.png" id="1_iks12"]
 [ext_resource type="Script" path="res://script/enemy_1.gd" id="1_khefn"]
@@ -11,15 +11,17 @@
 [ext_resource type="Texture2D" uid="uid://blrqelit1o45g" path="res://resources/Characters/Enemy1/pink_0.png" id="9_5bc5d"]
 [ext_resource type="Texture2D" uid="uid://yy8lhinvok74" path="res://resources/Characters/Enemy1/blue_2.png" id="11_hng76"]
 [ext_resource type="Texture2D" uid="uid://0ft610m2fq7u" path="res://resources/Characters/Enemy1/brown_3.png" id="12_jdp7w"]
+[ext_resource type="FontFile" uid="uid://c5l5lpvy6n1fy" path="res://resources/Fibberish v1.0/fibberish.ttf" id="17_nm3y3"]
 [ext_resource type="Texture2D" uid="uid://ddmevynf3lbr4" path="res://resources/Characters/Enemy1/gold_0.png" id="18_48obv"]
+[ext_resource type="Texture2D" uid="uid://bn21pi5ay1uo1" path="res://resources/Room/fondo_dialogo.png" id="18_mevgr"]
 [ext_resource type="Texture2D" uid="uid://cggtnr8a3vslj" path="res://resources/Characters/Enemy1/hairless_1.png" id="19_setsw"]
 [ext_resource type="Texture2D" uid="uid://bbweulc2n6etp" path="res://resources/Characters/Enemy1/peach_0.png" id="20_0ljln"]
 [ext_resource type="Texture2D" uid="uid://ud4impjpugeg" path="res://resources/Characters/Enemy1/seal_point_0.png" id="22_vtoka"]
 [ext_resource type="Texture2D" uid="uid://btigjgbrn0eh1" path="res://resources/Characters/Enemy1/teal_0.png" id="23_wla3b"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_pljy0"]
-radius = 4.0
-height = 10.0
+radius = 5.0
+height = 12.0
 
 [sub_resource type="Animation" id="Animation_xulph"]
 length = 0.001
@@ -153,3 +155,22 @@ libraries = {
 tree_root = SubResource("AnimationNodeStateMachine_jya8b")
 anim_player = NodePath("../AnimationPlayer")
 parameters/playback = SubResource("AnimationNodeStateMachinePlayback_nfg2n")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -31.0
+offset_top = -18.0
+offset_right = 31.0
+offset_bottom = 10.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("17_nm3y3")
+theme_override_font_sizes/font_size = 4
+text = "hi, my name is flo
+I am a singer"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="Label"]
+show_behind_parent = true
+position = Vector2(31, 5)
+scale = Vector2(0.833333, 0.75)
+texture = ExtResource("18_mevgr")
