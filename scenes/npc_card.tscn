@@ -1,0 +1,59 @@
+[gd_scene load_steps=6 format=3 uid="uid://dvfpd18gmlds8"]
+
+[ext_resource type="Texture2D" uid="uid://c5wyf0qa2muxk" path="res://resources/NPC card/tileset1.png" id="1_pcdso"]
+[ext_resource type="Texture2D" uid="uid://2jueqcud6juk" path="res://resources/stringstar fields/background_0.png" id="2_qs6vn"]
+[ext_resource type="Script" path="res://scenes/npc_card.gd" id="2_ykmrd"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mof4j"]
+texture = ExtResource("1_pcdso")
+5:7/0 = 0
+5:8/0 = 0
+6:8/0 = 0
+7:8/0 = 0
+6:7/0 = 0
+7:7/0 = 0
+7:12/0 = 0
+6:12/0 = 0
+5:12/0 = 0
+1:10/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_t06yv"]
+sources/0 = SubResource("TileSetAtlasSource_mof4j")
+
+[node name="IdFile" type="TileMap"]
+tile_set = SubResource("TileSet_t06yv")
+format = 2
+layer_0/tile_data = PackedInt32Array(458766, 458752, 8, 393230, 458752, 7, 393229, 393216, 7, 393228, 393216, 7, 393227, 393216, 7, 458765, 393216, 8, 327692, 393216, 7, 458763, 393216, 8, 458764, 393216, 8, 458762, 393216, 8, 458761, 393216, 8, 458760, 393216, 8, 458759, 393216, 8, 458758, 393216, 8, 458757, 393216, 8, 458756, 393216, 8, 458755, 393216, 8, 458754, 393216, 8, 393217, 327680, 7, 327681, 327680, 7, 262145, 327680, 7, 262146, 393216, 7, 196610, 393216, 7, 196611, 393216, 12, 196612, 393216, 7, 262148, 393216, 12, 262149, 393216, 7, 262150, 393216, 12, 327685, 393216, 7, 327684, 393216, 7, 327683, 393216, 7, 393219, 393216, 7, 393218, 393216, 7, 327682, 393216, 7, 262147, 393216, 7, 393220, 393216, 7, 327686, 393216, 7, 393222, 393216, 7, 393221, 393216, 7, 393223, 393216, 7, 393224, 393216, 7, 393225, 393216, 7, 393226, 393216, 7, 327690, 393216, 7, 327691, 393216, 7, 262155, 393216, 7, 262154, 393216, 7, 262153, 393216, 7, 262152, 393216, 12, 327688, 393216, 7, 327687, 393216, 7, 196614, 393216, 7, 196613, 393216, 7, 196615, 393216, 7, 196616, 393216, 7, 262151, 393216, 12, 327689, 393216, 7, 196617, 393216, 7, 327693, 393216, 7, 327694, 458752, 7, 262158, 458752, 7, 196622, 458752, 7, 196621, 393216, 7, 196620, 393216, 7, 262156, 393216, 7, 262157, 393216, 7, 196619, 393216, 7, 196618, 393216, 7, 196609, 327680, 7, 131073, 327680, 7, 131074, 393216, 7, 131075, 393216, 12, 131076, 393216, 7, 131077, 393216, 7, 131078, 393216, 7, 65543, 393216, 7, 65544, 393216, 7, 65545, 393216, 7, 65546, 393216, 7, 65547, 393216, 7, 65548, 393216, 7, 65549, 393216, 12, 65550, 458752, 12, 131086, 458752, 7, 131085, 393216, 7, 131084, 393216, 7, 131083, 393216, 7, 131082, 393216, 7, 131081, 393216, 7, 131080, 393216, 7, 131079, 393216, 7, 65537, 327680, 12, 65538, 393216, 7, 65539, 393216, 7, 65540, 393216, 7, 65541, 393216, 7, 65542, 393216, 7, 458753, 327680, 8)
+script = ExtResource("2_ykmrd")
+
+[node name="Background" type="Sprite2D" parent="."]
+show_behind_parent = true
+position = Vector2(136, 76)
+texture = ExtResource("2_qs6vn")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Background"]
+
+[node name="TextBoxContainer" type="MarginContainer" parent="Background/CanvasLayer"]
+anchors_preset = -1
+anchor_top = 0.493
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 19.0
+offset_top = -53.992
+offset_right = -18.0
+offset_bottom = 55.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="Background/CanvasLayer/TextBoxContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Background/CanvasLayer/TextBoxContainer/Panel"]
+layout_mode = 0
+offset_left = 34.0
+offset_top = 6.0
+offset_right = 74.0
+offset_bottom = 46.0
+
+[node name="Label" type="Label" parent="Background/CanvasLayer/TextBoxContainer/Panel/VBoxContainer"]
+layout_mode = 2

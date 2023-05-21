@@ -75,6 +75,7 @@ func set_camera_limit(sup_izq: Vector2,inf_der: Vector2):
 	camera_2d.limit_right = inf_der.x
 	camera_2d.limit_top = sup_izq.y
 
+
 func _ready():
 	talk_area.body_entered.connect(_on_talk_entered)
 	talk_area.body_exited.connect(_on_talk_exited)
@@ -93,4 +94,5 @@ func _on_talk_exited(body:Node):  #para ocupar boton, borrar esta funcion y desc
 #func _on_talk_exited(body:Node):
 #	if body in talk_area_array:
 #		talk_area_array.erase(body)
+
 
