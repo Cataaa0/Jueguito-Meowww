@@ -244,3 +244,8 @@ layout_mode = 2
 theme = ExtResource("3_vq3yx")
 theme_override_font_sizes/font_size = 10
 text = "INFORMATION :D"
+
+[node name="Go_back" type="Button" parent="PanelContainer"]
+layout_mode = 2
+theme = ExtResource("3_vq3yx")
+text = "go back"
