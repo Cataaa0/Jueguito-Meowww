@@ -469,7 +469,6 @@ script = ExtResource("1_bpuqm")
 position = Vector2(1, -6)
 sprite_frames = SubResource("SpriteFrames_ojgnc")
 animation = &"idle"
-frame = 3
 
 [node name="TalkArea" type="Area2D" parent="Pivot"]
 

@@ -132,14 +132,14 @@ layout_mode = 2
 theme_type_variation = &"MediumButton"
 text = "Start"
 
-[node name="Exit" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer"]
-unique_name_in_owner = true
-layout_mode = 2
-theme_type_variation = &"MediumButton"
-text = "Exit"
-
 [node name="Credits" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 theme_type_variation = &"MediumButton"
 text = "Credits"
+
+[node name="Exit" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_type_variation = &"MediumButton"
+text = "Exit"
