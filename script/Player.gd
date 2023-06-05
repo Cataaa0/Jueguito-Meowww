@@ -81,11 +81,11 @@ func _ready():
 	talk_area.body_exited.connect(_on_talk_exited)
 
 func _on_talk_entered(body:Node):  #para ocupar boton, borrar esta funcion y descomentar lo comentado
-	if body.has_method("talk"):
+	if body.has_method("talk") and Input.is_action_just_pressed("interact"):
 		body.talk()
 		
 func _on_talk_exited(body:Node):  #para ocupar boton, borrar esta funcion y descomentar lo comentado
-	if body.has_method("talk"):
+	if body.has_method("talk") and Input.is_action_just_pressed("interact"):
 		body.stop_talk()
 
 #func _on_talk_entered(body:Node):

@@ -68,8 +68,11 @@ func talk():
 	if label.visible:
 		return
 	label.visible = true
+	randomize_name()
+	label.text = "Name: " + cat_name + "\nProfession: " + cat_profession
 	#await get_tree().create_timer(1).timeout
 	#label.visible = false
 
 func stop_talk():
 	label.visible = false
+	
