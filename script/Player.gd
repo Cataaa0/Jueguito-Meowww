@@ -12,9 +12,8 @@ const ACCELERATION = 1000
 @onready var camera_2d = $Camera2D
 @onready var audio_stream_player = $AudioStreamPlayer
 @onready var talk_area = $Pivot/TalkArea
+@onready var memories = $CanvasLayer/Memories
 
-
-var talk_area_array = []
 
 func _physics_process(delta):
 	# Add the gravity.
@@ -79,14 +78,18 @@ func set_camera_limit(sup_izq: Vector2,inf_der: Vector2):
 func _ready():
 	talk_area.body_entered.connect(_on_talk_entered)
 	talk_area.body_exited.connect(_on_talk_exited)
+	
 
 func _on_talk_entered(body:Node):  #para ocupar boton, borrar esta funcion y descomentar lo comentado
-	if body.has_method("talk") and Input.is_action_just_pressed("interact"):
+	if body.has_method("talk"):
 		body.talk()
+		memories.show()
+		
 		
 func _on_talk_exited(body:Node):  #para ocupar boton, borrar esta funcion y descomentar lo comentado
-	if body.has_method("talk") and Input.is_action_just_pressed("interact"):
+	if body.has_method("talk"):
 		body.stop_talk()
+		memories.hide()
 
 #func _on_talk_entered(body:Node):
 #	talk_area_array.append(body)

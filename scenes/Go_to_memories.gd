@@ -5,7 +5,7 @@ extends MarginContainer
 
 func _ready():
 	memories.pressed.connect(_on_memories_pressed)
-#	hide()
+	hide()
 	
 #func _on_button_entered():
 #	if body.has_method("talk"):

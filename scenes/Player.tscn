@@ -209,7 +209,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_op0ak"]
-size = Vector2(26, 7)
+size = Vector2(27, 7)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ba3ym"]
 radius = 4.0
@@ -469,12 +469,11 @@ script = ExtResource("1_bpuqm")
 position = Vector2(1, -6)
 sprite_frames = SubResource("SpriteFrames_ojgnc")
 animation = &"idle"
-frame = 3
 
 [node name="TalkArea" type="Area2D" parent="Pivot"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Pivot/TalkArea"]
-position = Vector2(8, -6.5)
+position = Vector2(9.5, -6.5)
 shape = SubResource("RectangleShape2D_op0ak")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

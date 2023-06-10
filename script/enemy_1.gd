@@ -24,6 +24,7 @@ var n_cat_name = 0
 var cat_name = '' :
 	get: 
 		return cat_names[n_cat_name]
+
 var n_cat_profession = 0
 var cat_profession = '' :
 	get: 
@@ -42,10 +43,10 @@ func _physics_process(delta):
 	move_and_slide()
 	
 func randomize_name():
-	cat_name =randi()%cat_names.size()
+	n_cat_name =randi()%cat_names.size()
 	
 func randomize_profession():
-	cat_profession =randi()%cat_professions.size()
+	n_cat_profession =randi()%cat_professions.size()
 	
 func randomize_color():
 	cat_color =randi()%enemy_cats.size()
@@ -68,7 +69,6 @@ func talk():
 	if label.visible:
 		return
 	label.visible = true
-	randomize_name()
 	label.text = "Name: " + cat_name + "\nProfession: " + cat_profession
 	#await get_tree().create_timer(1).timeout
 	#label.visible = false
