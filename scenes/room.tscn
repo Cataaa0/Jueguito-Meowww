@@ -222,7 +222,9 @@ terrain_set_0/terrain_1/name = "wall"
 terrain_set_0/terrain_1/color = Color(0.890196, 0.729412, 0.156863, 1)
 sources/2 = SubResource("TileSetAtlasSource_tvv7m")
 
-[node name="Room" type="Node2D"]
+[node name="Room" type="CanvasLayer"]
+process_mode = 3
+layer = 5
 script = ExtResource("1_5dvfl")
 
 [node name="TileMap" type="TileMap" parent="."]

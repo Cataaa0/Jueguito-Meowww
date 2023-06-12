@@ -14,4 +14,6 @@ func _ready():
 	
 func _on_memories_pressed():
 	#get_tree().paused = true
-	get_tree().change_scene_to_file("res://scenes/room.tscn")
+
+	Game.show_room()
+	#get_tree().change_scene_to_file("res://scenes/room.tscn")

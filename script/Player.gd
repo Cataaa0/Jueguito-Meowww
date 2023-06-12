@@ -15,6 +15,12 @@ const ACCELERATION = 1000
 @onready var memories = $CanvasLayer/Memories
 
 
+
+ 
+
+var can_talk := false
+
+
 func _physics_process(delta):
 	# Add the gravity.
 	if not is_on_floor():
@@ -23,6 +29,10 @@ func _physics_process(delta):
 	# Handle Jump.
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 		jump()
+		
+	if Input.is_action_just_pressed("interact") and can_talk :
+		Game.show_room()
+		
 	
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
@@ -78,18 +88,24 @@ func set_camera_limit(sup_izq: Vector2,inf_der: Vector2):
 func _ready():
 	talk_area.body_entered.connect(_on_talk_entered)
 	talk_area.body_exited.connect(_on_talk_exited)
+	Game.player = self
 	
 
 func _on_talk_entered(body:Node):  #para ocupar boton, borrar esta funcion y descomentar lo comentado
 	if body.has_method("talk"):
 		body.talk()
 		memories.show()
+		can_talk = true
 		
 		
 func _on_talk_exited(body:Node):  #para ocupar boton, borrar esta funcion y descomentar lo comentado
 	if body.has_method("talk"):
 		body.stop_talk()
 		memories.hide()
+		can_talk = false
+		
+
+	
 
 #func _on_talk_entered(body:Node):
 #	talk_area_array.append(body)

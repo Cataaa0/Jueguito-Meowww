@@ -17,6 +17,7 @@ var inconsistencia_cat := false
 var n_inconsistencias := 0
 var inconsistencias : Array[bool] = []  
 
+
 var cat_color := 0 
 var idle_n := 0
 
