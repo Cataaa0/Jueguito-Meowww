@@ -14,3 +14,4 @@ func hide_room():
 	room.queue_free()
 	room = null
 	get_tree().paused = false
+
