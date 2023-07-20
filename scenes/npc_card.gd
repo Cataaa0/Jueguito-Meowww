@@ -1,9 +1,10 @@
 extends TileMap
 @onready var room = $Background/RetryButton/MarginContainer/Room
+@onready var label = $Background/Text/TextBoxContainer/Panel/VBoxContainer/Label
 
 func _ready():
 	room.pressed.connect(_on_room_pressed)
-	
+	label.text = "Flo: orange cat \nThainy: black cat \nOreo: White cat \n Jack: Pink cat"
 func _on_room_pressed():
 	get_tree().change_scene_to_file("res://scenes/main.tscn")
 

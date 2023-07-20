@@ -77,3 +77,5 @@ func talk():
 func stop_talk():
 	label.visible = false
 	
+func info():
+	return cat_name
