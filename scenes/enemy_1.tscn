@@ -131,7 +131,7 @@ graph_offset = Vector2(0, -5.48363e-06)
 script = ExtResource("1_khefn")
 enemy_cats = Array[Texture]([ExtResource("1_iks12"), ExtResource("3_tjl8u"), ExtResource("11_hng76"), ExtResource("12_jdp7w"), ExtResource("5_63sae"), ExtResource("4_80kid"), ExtResource("6_e0wb7"), ExtResource("18_48obv"), ExtResource("7_lijmr"), ExtResource("19_setsw"), ExtResource("8_h5kfu"), ExtResource("20_0ljln"), ExtResource("9_5bc5d"), ExtResource("22_vtoka"), ExtResource("23_wla3b")])
 cat_names = Array[String](["Flo", "Oreo", "Hachi", "Thainy", "Jack", "Puky", "Almendra", "Pelusa", "Tofu", "Orejas", "Miau", "Colmillo", "Cachupin"])
-cat_professions = Array[String](["Ingeniere", "Bombere", "Cantante", "Proplayer", "Abogade", "Profesore", "Chef", "Ladrone", "Hacker", "Comerciante", "Chofer", "Medique", "Guardia", "Panadere", "Arquitecte", "Filosofe", "Jardinere", "Enfermere", "Uber"])
+cat_professions = Array[String](["Ingeniere", "Bombere", "Cantante", "Proplayer", "Abogade", "Profesore", "Chef", "Ladrone", "Hacker", "Comerciante", "Chofer", "Medique", "Guardia", "Panadere", "Arquitecte", "Filosofe", "Jardinere", "Enfermere"])
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(-1.19209e-07, -3.57628e-07)
