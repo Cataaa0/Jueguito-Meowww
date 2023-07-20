@@ -122,7 +122,7 @@ func _on_talk_exited(body:Node):  #para ocupar boton, borrar esta funcion y desc
 
 
 func _on_timer_timeout():
-	get_tree().change_scene_to_file("res://scenes/end_limbo.tscn")
+	get_tree().change_scene_to_file("res://scenes/end_infierno.tscn")
 
 func update_time_label():
 	# Convierte el resultado de floor(time_left / 60) a un número entero

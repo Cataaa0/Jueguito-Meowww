@@ -1,10 +1,10 @@
-[gd_scene format=3 uid="uid://d3imdvt5wco84"]
+[gd_scene load_steps=2 format=3 uid="uid://d3imdvt5wco84"]
+
+[ext_resource type="Texture2D" uid="uid://bya8ptponvphw" path="res://resources/Infierno.jpg" id="1_frqoy"]
 
 [node name="Node2D" type="Node2D"]
 
-[node name="Label" type="Label" parent="."]
-offset_left = 81.0
-offset_top = 52.0
-offset_right = 187.0
-offset_bottom = 86.0
-text = "INFIERNO"
+[node name="Infierno" type="Sprite2D" parent="."]
+position = Vector2(128, 66)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("1_frqoy")

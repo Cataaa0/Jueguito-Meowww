@@ -1,10 +1,10 @@
-[gd_scene format=3 uid="uid://bbt3tq4j28du7"]
+[gd_scene load_steps=2 format=3 uid="uid://bbt3tq4j28du7"]
+
+[ext_resource type="Texture2D" uid="uid://7qdtkhuaa006" path="res://resources/Cielo.png" id="1_ucd1p"]
 
 [node name="Node2D" type="Node2D"]
 
-[node name="Label" type="Label" parent="."]
-offset_left = 88.0
-offset_top = 57.0
-offset_right = 134.0
-offset_bottom = 83.0
-text = "Cielo"
+[node name="Cielo" type="Sprite2D" parent="."]
+position = Vector2(129, 77)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("1_ucd1p")
