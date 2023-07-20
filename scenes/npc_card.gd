@@ -5,7 +5,7 @@ func _ready():
 	room.pressed.connect(_on_room_pressed)
 	
 func _on_room_pressed():
-	get_tree().change_scene_to_file("res://scenes/room.tscn")
+	get_tree().change_scene_to_file("res://scenes/main.tscn")
 
 #@export var cat_names: Array [String]
 #@onready var text_box_container = $Background/CanvasLayer/TextBoxContainer
