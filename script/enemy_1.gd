@@ -70,7 +70,7 @@ func talk():
 	if label.visible:
 		return
 	label.visible = true
-	label.text = "Name: " + cat_name + "\nProfession: " + cat_profession
+	label.text = "Hi! my name is " + cat_name + "\nI am a " + cat_profession
 	#await get_tree().create_timer(1).timeout
 	#label.visible = false
 

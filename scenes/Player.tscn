@@ -1,4 +1,4 @@
-[gd_scene load_steps=63 format=3 uid="uid://bgogccwf21d54"]
+[gd_scene load_steps=62 format=3 uid="uid://bgogccwf21d54"]
 
 [ext_resource type="Texture2D" uid="uid://krwk1rewn2gd" path="res://resources/Characters/Meow Knight/Meow-Knight_Idle.png" id="1_163vi"]
 [ext_resource type="Script" path="res://script/Player.gd" id="1_bpuqm"]
@@ -458,8 +458,6 @@ states/start_jump/position = Vector2(406, 206.316)
 transitions = ["Start", "idle", SubResource("AnimationNodeStateMachineTransition_vv1yd"), "idle", "run", SubResource("AnimationNodeStateMachineTransition_x26ya"), "run", "idle", SubResource("AnimationNodeStateMachineTransition_c5agr"), "idle", "start_jump", SubResource("AnimationNodeStateMachineTransition_lx4wt"), "start_jump", "jump", SubResource("AnimationNodeStateMachineTransition_jtm26"), "jump", "fall", SubResource("AnimationNodeStateMachineTransition_oh3vo"), "idle", "fall", SubResource("AnimationNodeStateMachineTransition_a8uns"), "fall", "jump_end", SubResource("AnimationNodeStateMachineTransition_dc08g"), "jump_end", "idle", SubResource("AnimationNodeStateMachineTransition_pa5jh"), "jump_end", "run", SubResource("AnimationNodeStateMachineTransition_4miyb")]
 graph_offset = Vector2(0, 80.2281)
 
-[sub_resource type="AnimationNodeStateMachinePlayback" id="AnimationNodeStateMachinePlayback_mjvdb"]
-
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_bpuqm")
 
@@ -500,7 +498,6 @@ offset_bottom = 145.0
 tree_root = SubResource("AnimationNodeStateMachine_e8wyg")
 anim_player = NodePath("../AnimationPlayer")
 active = true
-parameters/playback = SubResource("AnimationNodeStateMachinePlayback_mjvdb")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
