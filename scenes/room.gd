@@ -5,6 +5,7 @@ extends CanvasLayer
 @onready var contrato = $PanelContainer/Contrato
 @export var room_scene : PackedScene
 var room
+
 func _ready():
 	first_id.pressed.connect(_on_first_id_pressed)
 	contrato.pressed.connect(_on_contrato_pressed)
