@@ -1,10 +1,21 @@
-[gd_scene load_steps=2 format=3 uid="uid://d3imdvt5wco84"]
+[gd_scene load_steps=4 format=3 uid="uid://d3imdvt5wco84"]
 
 [ext_resource type="Texture2D" uid="uid://bya8ptponvphw" path="res://resources/Infierno.jpg" id="1_frqoy"]
+[ext_resource type="Script" path="res://scenes/end_infierno.gd" id="1_o6512"]
+[ext_resource type="Theme" uid="uid://b33o55cuc1nrp" path="res://resources/menu_theme.tres" id="3_o01lx"]
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource("1_o6512")
 
 [node name="Infierno" type="Sprite2D" parent="."]
 position = Vector2(128, 66)
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("1_frqoy")
+
+[node name="menu" type="Button" parent="."]
+offset_left = 89.0
+offset_top = 17.0
+offset_right = 162.0
+offset_bottom = 39.0
+theme = ExtResource("3_o01lx")
+text = "main menu"

@@ -1,10 +1,21 @@
-[gd_scene load_steps=2 format=3 uid="uid://bbt3tq4j28du7"]
+[gd_scene load_steps=4 format=3 uid="uid://bbt3tq4j28du7"]
 
+[ext_resource type="Script" path="res://scenes/end_cielo.gd" id="1_0adxh"]
 [ext_resource type="Texture2D" uid="uid://7qdtkhuaa006" path="res://resources/Cielo.png" id="1_ucd1p"]
+[ext_resource type="Theme" uid="uid://b33o55cuc1nrp" path="res://resources/menu_theme.tres" id="2_1pg1b"]
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource("1_0adxh")
 
 [node name="Cielo" type="Sprite2D" parent="."]
 position = Vector2(129, 77)
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("1_ucd1p")
+
+[node name="menu" type="Button" parent="."]
+offset_left = 94.0
+offset_top = 28.0
+offset_right = 167.0
+offset_bottom = 50.0
+theme = ExtResource("2_1pg1b")
+text = "main menu"
