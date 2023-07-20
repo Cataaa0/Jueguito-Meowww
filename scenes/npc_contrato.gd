@@ -6,7 +6,7 @@ func _ready():
 	room.pressed.connect(_on_room_pressed)
 	label.text = "Flo: Bombere cat \nThainy: Ingeniere cat \nOreo: Chef cat \n Jack: Chofer cat"
 func _on_room_pressed():
-	get_tree().change_scene_to_file("res://scenes/room.tscn")
+	get_tree().change_scene_to_file("res://scenes/main.tscn")
 
 #@export var cat_names: Array [String]
 #@onready var text_box_container = $Background/CanvasLayer/TextBoxContainer
