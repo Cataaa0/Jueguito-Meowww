@@ -13,13 +13,13 @@ const ACCELERATION = 1000
 @onready var audio_stream_player = $AudioStreamPlayer
 @onready var talk_area = $Pivot/TalkArea
 @onready var memories = $CanvasLayer/Memories
+@onready var time = $Time
+@onready var timer = $Timer
 
-
-
- 
+var timer_duration = 180 # Duración del temporizador en segundos
+var time_left : int= 180  # Inicializa el tiempo restante con el valor del temporizador 
 
 var can_talk := false
-
 
 func _physics_process(delta):
 	# Add the gravity.
@@ -89,8 +89,12 @@ func _ready():
 	talk_area.body_entered.connect(_on_talk_entered)
 	talk_area.body_exited.connect(_on_talk_exited)
 	Game.player = self
-	
+	update_time_label()
 
+func _process(delta):
+	time_left = timer.time_left
+	update_time_label()
+	
 func _on_talk_entered(body:Node):  #para ocupar boton, borrar esta funcion y descomentar lo comentado
 	if body.has_method("talk"):
 		body.talk()
@@ -115,3 +119,13 @@ func _on_talk_exited(body:Node):  #para ocupar boton, borrar esta funcion y desc
 #		talk_area_array.erase(body)
 
 
+
+
+func _on_timer_timeout():
+	get_tree().change_scene_to_file("res://scenes/end_limbo.tscn")
+
+func update_time_label():
+	# Convierte el resultado de floor(time_left / 60) a un número entero
+	var minutes = int(floor(time_left / 60))
+	# Actualiza el contenido del Label para mostrar el tiempo restante formateado como minutos:segundos
+	time.text = str(minutes).pad_zeros(2) + ":" + str(time_left % 60).pad_zeros(2)
